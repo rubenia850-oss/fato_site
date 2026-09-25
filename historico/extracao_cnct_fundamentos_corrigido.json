@@ -1,0 +1,176 @@
+[
+  {
+    "nome": "TÉCNICO EM PETROQUÍMICA",
+    "perfil_conclusao": "Planeja, opera, monitora e controla processos de produção petroquímica e de petróleo. Realiza amostragens, análises químicas e físico-químicas. Avalia e controla a qualidade de matérias primas, insumos e produtos.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática. Laboratório de Química Básica. Laboratório de Química Orgânica. Laboratório de Química Analítica e Instrumental. Laboratório de Análise de Petróleo e Derivados.",
+    "campo_atuacao_correto": "Empresas e indústrias químicas e petroquímicas, de refino de petróleo. Laboratórios de caracterização de petróleo e derivados e controle de qualidade de insumos e produtos."
+  },
+  {
+    "nome": "TÉCNICO EM PETRÓLEO E GÁS",
+    "perfil_conclusao": "Opera, controla, coordena e monitora processos de produção e refino de petróleo e gás. Programa, coordena e planeja a manutenção de máquinas e equipamentos. Realiza amostragens e caracterizações de petróleo, gás natural e derivados. Realiza procedimento de controle de qualidade de matérias-primas, insumos e produtos. Analisa dados estatísticos do processo produtivo e interpreta laudos de análises químicas. Compra e estoca matérias-primas, produtos e insumos.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos. Laboratório de análises de petróleo e gás. Laboratório de química básica (geral, físico-química e inorgânica). Laboratório de química orgânica. Laboratório de química analítica e instrumental.",
+    "campo_atuacao_correto": "Processos industriais e instalações da indústria de petróleo e gás. Extração do petróleo e gás. Laboratórios de análise, certificação, desenvolvimento de produtos derivados do petróleo e do gás natural. Indústrias de refino de petróleo e gás natural. Instituições de pesquisa e desenvolvimento de produtos derivados do petróleo e gás. Empresas de comercialização de produtos derivados de petróleo e gás, bem como prestadoras de serviço do setor."
+  },
+  {
+    "nome": "TÉCNICO EM QUÍMICA",
+    "perfil_conclusao": "Opera, controla e monitora processos industriais e laboratoriais. Avalia atividades. Controla a qualidade de matériasprimas, insumos e produtos. Realiza amostragens, análises químicas, físico-químicas e microbiológicas. Desenvolve produtos e processos. Compra e estoca matérias-primas, insumos e produtos.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico atualizado. Laboratório de informática. Laboratório de química básica. Laboratório de química orgânica. Laboratório de química analítica e instrumental. Laboratório de microbiologia.",
+    "campo_atuacao_correto": "Indústrias químicas. Laboratórios de controle de qualidade, de certificação de produtos químicos, alimentícios e afins. Laboratórios de ensino, de pesquisa e de desenvolvimento em indústrias ou empresas químicas. Empresas de consultoria, assistência técnica, de comercialização de produtos químicos, farmoquímicos e farmacêuticos. Estações de tratamento de águas e efluentes."
+  },
+  {
+    "nome": "TÉCNICO EM ANÁLISES QUÍMICAS",
+    "perfil_conclusao": "Controla processos industriais e laboratoriais. Controla a qualidade de matérias-primas, insumos e produtos. Realiza amostragens, análises químicas, físico-químicas e microbiológicas. Desenvolve produtos e processos. Compra e estoca matérias-primas, insumos e produtos.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico atualizado. Laboratório de Informática. Laboratório de Química Básica. Laboratório de Química Orgânica. Laboratório de Química Analítica e Instrumental. Laboratório de Microbiologia.",
+    "campo_atuacao_correto": "Indústrias químicas. Laboratórios de controle de qualidade, de certificação de produtos químicos, alimentícios e afins. Laboratórios de ensino, de pesquisa e de desenvolvimento em indústrias ou empresas químicas. Empresas de consultoria, de assistência técnica, de comercialização de produtos químicos, farmoquímicos e farmacêuticos. Estações de tratamento de águas e efluentes."
+  },
+  {
+    "nome": "TÉCNICO EM PLÁSTICOS",
+    "perfil_conclusao": "Planeja, opera, controla, coordena e monitora o processo de fabricação de produtos de plástico e de reciclagem. Supervisiona a aquisição de matéria-prima e controla a qualidade do produto acabado. Realiza ensaios físicos. Identifica a composição do material de produtos acabados. Elabora o dimensionamento das necessidades da instalação industrial.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratórios de hidráulica e pneumática. Laboratórios de ensaios físicos. Laboratórios de informática. Laboratório de injeção, extrusão e sopro. Laboratório de monofilamento e granulação e acabamento superficial.",
+    "campo_atuacao_correto": "Indústrias de transformação de plásticos em geral. Indústrias de processamento de borracha. Indústrias de reciclagem para plásticos. Empresas de comercialização, assistência técnica e prestação de serviços voltados para produtos plásticos. Laboratório de pesquisa e desenvolvimento. Indústria de embalagens."
+  },
+  {
+    "nome": "TÉCNICO EM AUTOMAÇÃO INDUSTRIAL",
+    "perfil_conclusao": "Realiza integração de sistemas de automação. Emprega programas de computação e redes industriais no controle da produção. Propõe, planeja e executa instalação de equipamentos automatizados e sistemas robotizados. Realiza manutenção em sistemas de automação industrial. Realiza medições, testes e calibrações de equipamentos elétricos. Executa procedimentos de controle de qualidade e gestão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos. Laboratório de eletricidade e eletrônica. Laboratório de Acionamentos Elétricos. Laboratório de Máquinas Elétricas. Laboratório de Instalações Elétricas. Laboratório de sistemas digitais. Laboratório de eletrohidráulica e eletropneumática. Laboratório de Controle e Automação. Laboratório de Robótica.",
+    "campo_atuacao_correto": "Indústrias com linhas de produção automatizadas, químicas, petroquímicas, de expoloração e produção de petróleo. aeroespaciais, automobilística, metalomecânica e plástico. Empresas de manutenção e reparos. Empresas integradoras de sistemas de automação industrial. Fabricantes de máquinas, componentes e equipamentos robotizados. Grupos de pesquisa que desenvolvam projetos na área de sistemas elétricos. Laboratórios de controle de qualidade."
+  },
+  {
+    "nome": "TÉCNICO EM ELETROTÉCNICA",
+    "perfil_conclusao": "Projeta, instala, opera e mantém elementos do sistema elétrico de potência. Elabora e desenvolve projetos de instalações elétricas industriais, prediais e residenciais e de infraestrutura para sistemas de telecomunicações em edificações. Planeja e executa instalação e manutenção de equipamentos e instalações elétricas. Aplica medidas para o uso eficiente da energia elétrica e de fontes energéticas alternativas. Projeta e instala sistemas de acionamentos elétricos e sistemas de automação industrial. Executa procedimentos de controle de qualidade e gestão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos. Laboratório de Eletricidade e Eletrônica. Laboratório de Acionamentos Elétricos. Laboratório de Máquinas Elétricas. Laboratório de Instalações Elétricas. Laboratório de Controle e Automação. Laboratório de Sistemas Elétricos de Potência.",
+    "campo_atuacao_correto": "Empresas de geração, transmissão e distribuição de energia elétrica. Empresas que atuam na instalação, manutenção, comercialização e utilização de equipamentos e sistemas elétricos. Grupos de pesquisa que desenvolvam projetos na área de sistemas elétricos. Laboratórios de controle de qualidade, calibração e manutenção. Indústrias de fabricação de máquinas, componentes e equipamentos elétricos. Concessionárias e prestadores de serviços de telecomunicações. Indústrias de transformação e extrativa em geral."
+  },
+  {
+    "nome": "TÉCNICO EM ELETROELETRÔNICA",
+    "perfil_conclusao": "Planeja e executa a instalação e manutenção de equipamentos e instalações eletroeletrônicas industriais. Projeta e instala sistemas de acionamento e controle eletroeletrônicos. Aplica medidas para o uso eficiente da energia elétrica e de fontes de energias alternativas. Elabora, desenvolve e executa projetos de instalações elétricas em edificações em baixa tensão. Realiza medições, testes e calibrações de equipamentos eletroeletrônicos. Executa procedimentos de controle de qualidade e gestão. Inspeciona componentes, produtos, serviços e atividades de profissionais da área de eletroeletrônica.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos. Laboratório de Eletricidade e Eletrônica. Laboratório de Acionamentos Elétricos. Laboratório de Máquinas Elétricas. Laboratório de Instalações Elétricas. Laboratório de sistemas digitais. Laboratório de Controle e Automação.",
+    "campo_atuacao_correto": "Empresas que atuam na instalação, manutenção, comercialização e utilização de equipamentos e sistemas eletroeletrônicos. Grupos de pesquisa que desenvolvam projetos na área de sistemas eletroeletrônicos. Laboratórios de controle de qualidade, calibração e manutenção. Indústrias de fabricação de máquinas, componentes e equipamentos eletroeletrônicos. Indústrias de transformação e extrativa em geral."
+  },
+  {
+    "nome": "TÉCNICO EM ELETRÔNICA",
+    "perfil_conclusao": "Desenvolve projetos eletrônicos com microcontroladores e microprocessadores. Executa e supervisiona a instalação e a manutenção de equipamentos, sistemas eletrônicos inclusive de transmissão e recepção de sinais. Realiza medições, testes e calibrações de equipamentos eletrônicos. Executa procedimentos de controle de qualidade e gestão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de eletricidade e eletrônica. Laboratório de eletrônica de potência. Laboratório de sistemas digitais. Laboratório de informática com programas específicos.",
+    "campo_atuacao_correto": "Empresas que atuam na instalação, manutenção, comercialização e utilização de equipamentos e sistemas eletrônicos. Grupos de pesquisa que desenvolvam projetos na área de sistemas eletrônicos. Laboratórios de controle de qualidade, calibração e manutenção. Empresas de Informática e de produtos eletrônicos. Concessionárias e prestadores de serviços de telecomunicações."
+  },
+  {
+    "nome": "TÉCNICO EM MECÂNICA",
+    "perfil_conclusao": "Elabora projetos de produtos, ferramentas, controle de qualidade, controle de processos e manutenção relacionados à máquinas e equipamentos mecânicos. Planeja, aplica e controla procedimentos de instalação, de manutenção e inspeção mecânica de máquinas e equipamentos. Opera equipamentos de usinagem. Aplica procedimentos de soldagem. Realiza interpretação de desenho técnico. Controla processos de fabricação. Aplica técnicas de medição e ensaios. Especifica materiais para construção mecânica.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico atualizado. Laboratório de Desenho Técnico Mecânico. Laboratório de Metrologia Dimensional. Laboratório de Desenho Assistido por Computador (CAD). Laboratório de Eletropneumático e Eletrohidráulico. Laboratório de Informática com programas dedicados. Laboratório de Máquinas Operatrizes Convencional e CNC. Laboratório de Acionamentos e Comandos Elétricos. Laboratório de Manutenção Mecânica. Laboratório de Ensaios Mecânicos. Laboratório de Metalografia. Laboratório de Soldagem. Laboratório de Ajustagem Mecânica. Laboratório de Tratamento Térmico.",
+    "campo_atuacao_correto": "Fábricas de máquinas, equipamentos e componentes mecânicos. Atividades de manutenção de qualquer indústria. Indústria aeroespacial. Indústria automobilística. Indústria metalmecânica em geral. Indústrias de alimentos e bebidas, termoelétricas e siderúrgicas."
+  },
+  {
+    "nome": "TÉCNICO EM MECÂNICA DE PRECISÃO",
+    "perfil_conclusao": "Indica os procedimentos e sequência adequada de atividades para desmontagem e montagem de sistemas mecânicos de alta precisão. Planeja os processos de manutenção de máquinas e equipamentos de precisão. Diagnostica as condições dos vários elementos de máquinas que compõem sistemas de precisão. Propõe processos de fabricação mecânica com tolerância dimensional adequada aos projetos de máquinas, equipamentos e produtos de alta qualidade. Realiza inspeção visual e testes em sistemas mecânicos de precisão. Realiza inspeção visual e testes em instrumentos e equipamentos mecânicos, pneumáticos, hidráulicos e eletromecânicos de máquinas. Interpreta desenhos mecânicos.",
+    "infraestrutura_correta": "Biblioteca e videoteca incluindo acervo específico e atualizado. Laboratório de Metrologia. Laboratório de Desenho Técnico Mecânico. Laboratório de desenho assistido por computador. Laboratório de Informática com programas dedicados. Laboratório de automação. Laboratório de fabricação mecânica. Laboratório de manutenção eletromecânica. Laboratório de Pneumática e Hidráulica. Laboratório de comando numérico computadorizado.",
+    "campo_atuacao_correto": "Indústrias de produtos alimentícios e bebidas. Empresas que fabricam instrumentos médico-hospitalares. Indústrias têxteis. Indústrias de material de transporte. Indústrias de artigos de borracha e plástico. Indústrias de produtos químicos. Indústrias de materiais compósitos. Indústrias de mecânica e de transformação. Indústrias de máquinas, equipamentos, aparelhos e materiais elétricos. Indústrias de equipamentos de instrumentação. Indústrias aeroespaciais. Indústria automobilística."
+  },
+  {
+    "nome": "TÉCNICO EM ELETROMECÂNICA",
+    "perfil_conclusao": "Planeja, projeta, executa, inspeciona e instala máquinas e equipamentos eletromecânicos. Realiza usinagem e soldagem de peças. Interpreta esquemas de montagem e desenhos técnicos. Realiza montagem, manutenção e entrega técnica de máquinas e equipamentos eletromecânicos. Realiza medições, testes e calibrações de equipamentos eletromecânicos. Executa procedimentos de controle de qualidade e gestão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico atualizado. Laboratório de informática com programas específicos. Laboratório de eletricidade e eletrônica. Laboratório de acionamentos elétricos. Laboratório de máquinas elétricas. Laboratório de instalações elétricas. Laboratório desenho técnico mecânico. Laboratório de metrologia dimensional. Laboratório eletropneumático e eletrohidráulico. Laboratório de máquinas operatrizes (convencional e CNC/manufatura assistida por computador). Laboratório de manutenção mecânica.",
+    "campo_atuacao_correto": "Indústrias com linhas de produção automatizadas, aeroespaciais, automobilística, metalomecânica e plástico. Indústrias de transformação e extrativa em geral. Empresas de manutenção e reparos. Empresas que atuam na instalação, manutenção, comercialização e utilização de equipamentos e sistemas eletromecânicos. Grupos de pesquisa que desenvolvam projetos na área de eletromecânica. Laboratórios de controle de qualidade, calibração e manutenção."
+  },
+  {
+    "nome": "TÉCNICO EM MECATRÔNICA",
+    "perfil_conclusao": "Projeta, instala e opera equipamentos automatizados e robotizados. Realiza programação, parametrização, medições e testes de equipamentos automatizados e robotizados. Realiza integração de equipamentos mecânicos e eletrônicos. Executa procedimentos de controle de qualidade e gestão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico especializado. Laboratório de Eletrônica (analógica, digital e industrial). Laboratório de Desenho Técnico Mecânico. Laboratório de Metrologia Dimensional. Laboratório de Desenho Assistido por Computador. Laboratório de Eletropneumático e Eletrohidráulico (automação com CLP). Laboratório de Robótica. Laboratório de Informática. Laboratório de Máquinas Operatrizes (Convencional e CNC/Manufatura Assistida por Computador). Laboratório de Microprocessadores e Microcontroladores. Laboratório de Acionamentos e Comandos Elétricos. Laboratório de Manutenção Mecânica. Laboratório de Máquinas Elétricas. Laboratório de Soldagem. Laboratório de Ensaios e Materiais.",
+    "campo_atuacao_correto": "Indústrias com linhas de produção automatizadas, aeroespaciais, automobilística, metalomecânica e plástico. Empresas integradoras de sistemas de automação industrial. Fabricantes de máquinas, componentes e equipamentos robotizados. Grupos de pesquisa que desenvolvam projetos na área de sistemas elétricos. Laboratórios de controle de qualidade."
+  },
+  {
+    "nome": "TÉCNICO EM FABRICAÇÃO MECÂNICA",
+    "perfil_conclusao": "Desenvolve projetos, planeja, supervisiona e controla atividades de fundição, usinagem convencional e computadorizada, caldeiraria, soldagem e processos de conformação mecânica. Interpreta desenho técnico. Seleciona, desenvolve e especifica ferramental para os processos produtivos. Executa ensaios mecânicos. Especifica materiais e insumos aplicados aos processos de fabricação mecânica.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de desenho décnico mecânico. Laboratório de metrologia dimensional. Laboratório de desenho assistido por computador (CAD). Laboratório de eletropneumático e eletrohidráulico. Laboratório de informática com programas dedicados. Laboratório de máquinas operatrizes (convencional e CNC/CAM). Laboratório de ensaios mecânicos. Laboratório de soldagem. Laboratório de ajustagem mecânica.",
+    "campo_atuacao_correto": "Fábricas de máquinas, equipamentos e componentes mecânicos. Indústrias aeroespaciais. Indústria automobilística e metalmecânica. Indústrias siderúrgicas. Oficinas mecânicas em geral. Fábricas de itens seriados."
+  },
+  {
+    "nome": "TÉCNICO EM METROLOGIA",
+    "perfil_conclusao": "Realiza desenvolvimento e manutenção de sistemas, equipamentos, métodos e padrões de medição. Assegura a qualidade e o correto funcionamento dos instrumentos de medição. Emprega técnicas e conceitos metrológicos. Controla os instrumentos de medição ou medidas materializadas. Supervisiona e realiza perícia metrológica. Realiza ensaios em instrumentos de medição usados nas indústrias e a calibração de padrões nas áreas de acústica e vibrações, mecânica, elétrica, telecomunicações, térmica, química, materiais, óptica e vazão.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas dedicados. Sala de desenho técnico. Laboratório de manutenção mecânica. Laboratório de Eletroeletrônica. Laboratório de Metrologia. Laboratório de Instrumentação em Metrologia. Laboratório de controle da qualidade. Laboratório de materiais e ensaios.",
+    "campo_atuacao_correto": "Indústrias. Instituições que operam com qualidade e medição. Organismos acreditadores e de avaliação da conformidade. Laboratórios de controle de qualidade, de manutenção, pesquisa e desenvolvimento de sistemas de medição. Planejamento e desenvolvimento de sistemas de controle e automação. Entidades de certificação de produtos. Laboratórios de universidades, instituições de pesquisa. Redes metrológicas, institutos de pesos e medidas."
+  },
+  {
+    "nome": "TÉCNICO EM SOLDAGEM",
+    "perfil_conclusao": "Planeja e coordena a execução de atividades de soldagem em estruturas metálicas e tubulações industriais, de acordo com a programação da produção. Executa elaboração de projetos. Seleciona processos de soldagem, metais de base e consumíveis. Executa ensaios para garantir a qualidade dos produtos soldados. Executa automatização dos processos de soldagem. Calibra equipamentos e máquinas de soldagem e corte. Utiliza processos de soldagem e corte com eletrodo revestido, TIG, MIG, MAG, oxigás, arco submerso, brasagem e plasma. Aplica procedimentos de soldagem. Inspeciona processos de fabricação.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas dedicados. Laboratório de eletrodo revestido. Laboratório de MIG/MAG e Arame Tubular. Laboratório de TIG. Laboratório de Arco Submerso. Laboratório de soldagem oxicombustível, oxicorte e brasagem. Laboratório de soldagem e corte a plasma. Laboratório de ensaios mecânicos. Laboratório de ensaios metalográficos. Laboratório de simulação de soldagem.",
+    "campo_atuacao_correto": "Indústria petrolífera e petroquímica, caldeiraria, indústria de papel e celulose, indústria metalúrgica, indústria metalmecânica, indústria naval, construção civil, indústria automobilística e indústria de transformação."
+  },
+  {
+    "nome": "TÉCNICO EM METALURGIA",
+    "perfil_conclusao": "Supervisiona e controla processos de preparação de matérias-primas e insumos. Elabora e realiza análises químicas, metalográficas, ensaios mecânicos, processos de fundição, modelagem e tratamento térmico de peças metálicas. Inspeciona e coordena a manutenção de equipamentos e de instalações. Elabora projetos de ferramentas. Desenvolve projetos e planos de negócios na área de produção e de comercialização.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico atualizado. Laboratório de Ajustagem Mecânica. Laboratório de Desenho Técnico Mecânico. Laboratório de Metrologia Dimensional. Laboratório de Desenho Assistido por Computador. Laboratórios de Modelagem e Fundição. Laboratório de Informática com programas dedicados. Laboratório de Soldagem. Laboratório de Conformação mecânica. Laboratórios de ensaios mecânicos. Laboratório de metalografia. Laboratório de Manutenção mecânica. Laboratório de máquinas operatrizes.",
+    "campo_atuacao_correto": "Empresas metalúrgicas e siderúrgicas. Planejamento e desenvolvimento de atividades em linhas de redução, refino, conformação e outros processos. Indústrias metalmecânica, siderúrgica, automobilística, naval, petrolífera, de extração e beneficiamento de minérios, de tratamento de superfícies e de fundição. Empresas de construção mecânica e controle de qualidade."
+  },
+  {
+    "nome": "TÉCNICO EM MANUTENÇÃO",
+    "perfil_conclusao": "Realiza diagnósticos, elabora e executa planos de manutenção e instalações de equipamentos, dispositivos e acessórios em veículos automotivos. Avalia e busca melhorias quanto à emissão de gases poluentes e às condições gerais de funcionamento e segurança do veículo. Coordena e realiza os diversos tipos de manutenção de veículos e máquinas agrícolas. Controla o registro, seguro e documentação de veículos automotivos. Interpreta desenhos técnicos. Aplica técnicas de medição e ensaios.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas dedicados. Laboratórios de mecânica. Laboratório de eletrônica e eletrotécnica. Laboratório de metrologia. Laboratório de hidráulica e pneumática. Laboratório de Soldagem. Laboratório de lubrificação. Oficina de manutenção. Laboratório de Desenho técnico mecânico.",
+    "campo_atuacao_correto": "Montadoras automotivas. Concessionárias e revendas. Oficinas mecânicas. Empresas de fabricação e comercialização de equipamentos, acessórios e peças para automóveis, implementos e máquinas agrícolas. Setor de manutenção de empresas da área agrícola em geral. Setor de instalação de equipamentos, dispositivos e acessórios em veículos automotivos. Empresas de vistorias e certificação veicular."
+  },
+  {
+    "nome": "TÉCNICO EM SISTEMAS DE ENERGIA RENOVÁVEL",
+    "perfil_conclusao": "Realiza projeto, instalação, operação, montagem e manutenção de sistemas de geração, transmissão e distribuição de energia elétrica de fontes renováveis de energia. Coordena atividades de utilização e conservação de energia e fontes alternativas (energia eólica, solar e hidráulica). Segue especificações técnicas e de segurança, e realiza montagem de projetos de viabilidade de geração de energia elétrica proveniente de fonte eólica, solar e hidráulica em substituição às convencionais. Aplica medidas para o uso eficiente da energia elétrica. Desenvolve novas formas produtivas voltadas para a geração de energias renováveis e eficiência energética. Identifica problemas de gestão energética e ambiental. Projeta soluções para questões decorrentes da geração, transmissão e distribuição da energia.",
+    "infraestrutura_correta": "Biblioteca e videoteca incluindo acervo específico e atualizado. Laboratório de informática com programas dedicados. Laboratório de eletrotécnica e eletrônica. Laboratório de Instalações Elétricas. Laboratório de Máquinas e Acionamentos Elétricos. Laboratório de Máquinas Elétricas. Laboratório de Sistemas de Geração de Energia Elétrica. Laboratório de Segurança do Trabalho. Laboratório de Qualidade de Energia. Laboratório de Ensaios Elétricos. Laboratório de Sistemas Elétricos de Potência.",
+    "campo_atuacao_correto": "Empresas de instalação, manutenção, comercialização e utilização de equipamentos e sistemas baseados em energia renovável. Pesquisa e projetos na área de sistemas de energia renovável. Órgãos da administração pública que utilizem energia renovável. Concessionárias e prestadores de serviços na área de transmissão e distribuição de energia elétrica. Concessionárias e prestadores de serviços na área de geração, transmissão e distribuição de energia elétrica."
+  },
+  {
+    "nome": "TÉCNICO EM BIOCOMBUSTÍVEIS",
+    "perfil_conclusao": "Opera, controla, coordena e monitora processos de produção de biocombustíveis sólidos, líquidos e gasosos. Supervisiona a aquisição e o beneficiamento de matérias-primas. Supervisiona a comercialização e distribuição de produtos. Executa processo de transformação de óleos vegetais em biocombustíveis líquidos. Executa processo de produção de biocombustíveis sólidos oriundos de produtos de florestas energéticas. Processa resíduos agropecuários para transformação em biocombustíveis gasosos. Controla a qualidade de matérias-primas, insumos e produtos.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática. Laboratório de Química Básica. Laboratório de Química Analítica. Laboratório de controle de qualidade de biocombustíveis sólidos, líquidos e gasosos.",
+    "campo_atuacao_correto": "Indústria de biodiesel e demais biocombustíveis. Laboratórios de controle de qualidade. Usinas de açúcar e álcool. Empresas distribuidoras de biocombustíveis. Cooperativas de produção de biocombustíveis."
+  },
+  {
+    "nome": "TÉCNICO EM SEGURANÇA DO TRABALHO",
+    "perfil_conclusao": "Analisa os métodos e os processos laborais. Identifica fatores de risco de acidentes do trabalho, de doenças profissionais e de trabalho e de presença de agentes ambientais agressivos ao trabalhador. Realiza procedimentos de orientação sobre medidas de eliminação e neutralização de riscos. Elabora procedimentos de acordo com a natureza da empresa. Promove programas, eventos e capacitações. Divulga normas e procedimentos de segurança e higiene ocupacional. Indica, solicita e inspeciona equipamentos de proteção coletiva e individual contra incêndio. Levanta e utiliza dados estatísticos de doenças e acidentes de trabalho para ajustes das ações prevencionistas. Produz relatórios referentes à segurança e à saúde do trabalhador.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos. Laboratório de higiene ocupacional e ergonomia. Laboratório de equipamentos de proteção individual. Laboratório de suporte básico à vida. Laboratório de proteção contra incêndios.",
+    "campo_atuacao_correto": "Indústrias. Hospitais. Comércios. Construção civil. Portos e aeroportos. Centrais de logística. Instituições de ensino. Fabricação e representação de equipamentos de segurança. Empresas e consultorias para capacitações em segurança do trabalho."
+  },
+  {
+    "nome": "TÉCNICO EM LOGÍSTICA",
+    "perfil_conclusao": "Realiza procedimentos de transportes, armazenamento e distribuição das cadeias de suprimentos. Agenda programa de manutenção de máquinas e equipamentos. Supervisiona processos de compras, recebimento, movimentação, expedição e distribuição de materiais e produtos. Presta serviços de atendimento aos clientes.",
+    "infraestrutura_correta": "Biblioteca e videoteca com acervo específico e atualizado. Laboratório de informática com programas específicos.",
+    "campo_atuacao_correto": "Instituições públicas, privadas e do terceiro setor."
+  },
+  {
+    "nome": "TÉCNICO EM REDES DE COMPUTADORES",
+    "perfil_conclusao": "Instala, configura, opera e monitora redes de computadores locais (LAN), metropolitanas (MAN) e de longa distância (WAN). Implanta e gerencia servidores de rede, protocolos de comunicação (TCP/IP, BGP, OSPF) e dispositivos de interconexão (switches, roteadores, firewalls). Apoia projetos de infraestrutura de rede com foco em disponibilidade, segurança e desempenho. Atua em ambientes corporativos, data centers e infraestrutura de telecomunicações.",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS",
+    "perfil_conclusao": "Desenvolve, testa e mantém sistemas computacionais e aplicações de software. Utiliza linguagens de programação, frameworks e metodologias ágeis. Participa de projetos de automação de processos, integração de sistemas e desenvolvimento de interfaces. Apoia projetos de transformação digital em ambientes industriais (MES, ERP, SCADA).",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM TELECOMUNICAÇÕES",
+    "perfil_conclusao": "Instala, opera, mantém e gerencia sistemas e equipamentos de telecomunicações — telefonia fixa e móvel, fibra óptica, rádio, satélite e redes de acesso (xDSL, GPON, 5G NR). Executa projetos de cabeamento estruturado e sistemas de comunicação para ambientes industriais e corporativos. Aplica normas ANATEL e padrões ITU-T.",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM INFORMÁTICA",
+    "perfil_conclusao": "Instala, configura e mantém hardware e software em ambientes corporativos. Apoia usuários no uso de sistemas operacionais, aplicativos de escritório e plataformas de colaboração. Realiza diagnóstico e reparo de equipamentos. Atua em helpdesk, suporte técnico e administração básica de sistemas.",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM MANUTENÇÃO E SUPORTE EM INFORMÁTICA",
+    "perfil_conclusao": "Realiza manutenção preventiva e corretiva em microcomputadores, periféricos e redes locais. Instala e configura sistemas operacionais e software. Presta suporte técnico a usuários. Elabora diagnósticos de falhas e executa procedimentos de recuperação de dados.",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM QUALIDADE",
+    "perfil_conclusao": "Planeja, executa e controla processos de garantia da qualidade em ambientes industriais. Realiza inspeção de produtos e processos, calibração de instrumentos, auditorias internas e análise de não-conformidades. Implanta e mantém sistemas de gestão da qualidade (ISO 9001, ISO/TS 16949, GMP). Aplica ferramentas estatísticas (CEP, FMEA, 8D). Elabora documentação técnica de qualidade (procedimentos, planos de controle, especificações).",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  },
+  {
+    "nome": "TÉCNICO EM BIOTECNOLOGIA",
+    "perfil_conclusao": "Executa técnicas laboratoriais de biologia molecular, microbiologia e bioquímica aplicadas à produção industrial. Participa de processos biotecnológicos (fermentação, bioprodução, controle microbiológico) em indústrias farmacêuticas, de alimentos, de biocombustíveis e de agricultura. Realiza controle de qualidade microbiológico e assegura boas práticas de fabricação (BPF/GMP). Opera equipamentos de laboratório de biossegurança (NB-1, NB-2).",
+    "infraestrutura_correta": null,
+    "campo_atuacao_correto": null
+  }
+]
