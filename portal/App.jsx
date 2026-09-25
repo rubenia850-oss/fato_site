@@ -1,9 +1,7 @@
 // NOTA DE ARQUITETURA (atualizada 05/07/2026 — quebra do monólito, D98-D105)
 // ──────────────────────────────────────────────────────────────────────────────
-// App.jsx é hoje só o orquestrador raiz: busca os dados via API (Cloudflare Worker + D1,
-// ver `apiClient.js`/`data/loadCore.js` — não roda mais SQL local via sql.js, ver SP-73/
-// HANDOFF.md 24/09/2026), monta o contexto de dados compartilhado e roteia entre as views.
-// Era um arquivo único de
+// App.jsx é hoje só o orquestrador raiz: carrega o banco (`fato_v168.db` via sql.js),
+// monta o contexto de dados compartilhado e roteia entre as views. Era um arquivo único de
 // 2823 linhas (13 funções de carga, 9 componentes, 14 views) — quebrado em 23 módulos:
 //   theme/tokens.js       — tokens de cor + helpers de estilo (pill/card/btn)
 //   utils/helpers.js      — funções puras (groupBy, slugify, fmtMoeda, fmtNum)
