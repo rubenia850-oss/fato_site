@@ -1,0 +1,348 @@
+{
+  "banco_version_origem": "produção v226 (fato_v226_reconciliado.db)",
+  "data_exportacao": "2026-07-22",
+  "sessao": "MIGRAÇÃO v5 — MIGRAÇÃO COMPLETA: loadSectorsGuia.js + resto de loadMercadoEmpresas.js portados. 85/85 tabelas do site no worker.",
+  "tabelas_no_worker_hoje": {
+    "trails": {
+      "schema_hash": "78a556129acd9b98",
+      "linhas_na_exportacao": 107
+    },
+    "trail_steps": {
+      "schema_hash": "26d4edad4c4890a5",
+      "linhas_na_exportacao": 426
+    },
+    "trail_step_sources": {
+      "schema_hash": "5d7d935c3300bb10",
+      "linhas_na_exportacao": 807
+    },
+    "trail_escola_links": {
+      "schema_hash": "1572ce54cedcaf16",
+      "linhas_na_exportacao": 894
+    },
+    "escola_sources": {
+      "schema_hash": "74be2ff059f595c3",
+      "linhas_na_exportacao": 253
+    },
+    "trail_cnct_profiles": {
+      "schema_hash": "d66a7db8b01bfa99",
+      "linhas_na_exportacao": 6
+    },
+    "trail_cbos": {
+      "schema_hash": "628a517922d77c42",
+      "linhas_na_exportacao": 98
+    },
+    "trail_normas": {
+      "schema_hash": "de4d66d6a6f7f5dd",
+      "linhas_na_exportacao": 55
+    },
+    "trail_dependencies": {
+      "schema_hash": "011846e039ff089b",
+      "linhas_na_exportacao": 14
+    },
+    "cnct_profiles": {
+      "schema_hash": "3ddd7ab2fc16cc42",
+      "linhas_na_exportacao": 111
+    },
+    "cnct_cbos": {
+      "schema_hash": "e634fac52f574911",
+      "linhas_na_exportacao": 272
+    },
+    "cnct_profile_sector_codes": {
+      "schema_hash": "d9b28383e85ce9de",
+      "linhas_na_exportacao": 104
+    },
+    "atlas_trail_profiles": {
+      "schema_hash": "90d68a13a9c60ca6",
+      "linhas_na_exportacao": 265
+    },
+    "atlas_trails": {
+      "schema_hash": "dae8eee8de88975a",
+      "linhas_na_exportacao": 187
+    },
+    "cnct_qualificacoes": {
+      "schema_hash": "3b29bf21c2427ad4",
+      "linhas_na_exportacao": 351
+    },
+    "course_especializacoes": {
+      "schema_hash": "5d74bd049b7ce906",
+      "linhas_na_exportacao": 348
+    },
+    "cnct_courses": {
+      "schema_hash": "5da8faa722baa371",
+      "linhas_na_exportacao": 99
+    },
+    "course_graduacoes": {
+      "schema_hash": "b73f84b1cf64125b",
+      "linhas_na_exportacao": 630
+    },
+    "cnct_verticalizacao": {
+      "schema_hash": "f421f03b6de62293",
+      "linhas_na_exportacao": 547
+    },
+    "profile_normas": {
+      "schema_hash": "95372640c13988a7",
+      "linhas_na_exportacao": 117
+    },
+    "dm_premio_transferencia": {
+      "schema_hash": "6840dd75d8457580",
+      "linhas_na_exportacao": 930
+    },
+    "dm_roteiro_carreira": {
+      "schema_hash": "82e64284351091a2",
+      "linhas_na_exportacao": 405
+    },
+    "dm_sinonimos_perfis": {
+      "schema_hash": "f791c616756583c9",
+      "linhas_na_exportacao": 21
+    },
+    "dm_rede_centralidade": {
+      "schema_hash": "98b6f574b9d8f3f0",
+      "linhas_na_exportacao": 85
+    },
+    "dm_rede_comunidades": {
+      "schema_hash": "d061f3edd4d8cf25",
+      "linhas_na_exportacao": 85
+    },
+    "dm_qualidade_preditiva": {
+      "schema_hash": "a9793295b1145a2d",
+      "linhas_na_exportacao": 47
+    },
+    "dm_oferta_real": {
+      "schema_hash": "35f765688d72c7e8",
+      "linhas_na_exportacao": 47
+    },
+    "dm_matriz_pivotamento": {
+      "schema_hash": "0555aa017f595252",
+      "linhas_na_exportacao": 7140
+    },
+    "companies": {
+      "schema_hash": "a94f768d017eba6f",
+      "linhas_na_exportacao": 1046
+    },
+    "company_url_suggestions": {
+      "schema_hash": "f8ab086f3504512b",
+      "linhas_na_exportacao": 85
+    },
+    "company_sectors": {
+      "schema_hash": "96d1701a78cebbe6",
+      "linhas_na_exportacao": 96
+    },
+    "industry_sectors": {
+      "schema_hash": "991bb447c663d4e4",
+      "linhas_na_exportacao": 12
+    },
+    "sources": {
+      "schema_hash": "74721274b5ca1fb0",
+      "linhas_na_exportacao": 1911
+    },
+    "dm_competicao_talentos": {
+      "schema_hash": "8b52b31290c22729",
+      "linhas_na_exportacao": 9
+    },
+    "dm_rede_empresas_comunidades": {
+      "schema_hash": "e18af1128702f49a",
+      "linhas_na_exportacao": 368
+    },
+    "dm_rede_empresas_centralidade": {
+      "schema_hash": "850687bf74ce62df",
+      "linhas_na_exportacao": 367
+    },
+    "sector_codes": {
+      "schema_hash": "ff3bae8110a6e148",
+      "linhas_na_exportacao": 29
+    },
+    "atlas_trail_sectors": {
+      "schema_hash": "1546f28f43e36c0c",
+      "linhas_na_exportacao": 519
+    },
+    "atlas_trail_cbos": {
+      "schema_hash": "e30d956876df10e3",
+      "linhas_na_exportacao": 64
+    },
+    "atlas_trail_normas": {
+      "schema_hash": "cb3715dbb4b53ad7",
+      "linhas_na_exportacao": 292
+    },
+    "atlas_nucleo": {
+      "schema_hash": "29da67eaba3e58f7",
+      "linhas_na_exportacao": 233
+    },
+    "atlas_trail_aproveitamento": {
+      "schema_hash": "d7eb44d52692611a",
+      "linhas_na_exportacao": 163
+    },
+    "dm_roi_estudo": {
+      "schema_hash": "7aeea6bc2099ea17",
+      "linhas_na_exportacao": 104
+    },
+    "dm_dificuldade_estimada": {
+      "schema_hash": "876a122c6355d582",
+      "linhas_na_exportacao": 145
+    },
+    "dm_tecnologias_por_trilha": {
+      "schema_hash": "51e81884113607fc",
+      "linhas_na_exportacao": 317
+    },
+    "dm_soft_skills_por_trilha": {
+      "schema_hash": "6dea22f92296e024",
+      "linhas_na_exportacao": 150
+    },
+    "dm_versatilidade_trilhas": {
+      "schema_hash": "d602fce2e660acce",
+      "linhas_na_exportacao": 145
+    },
+    "atlas_trail_detail": {
+      "schema_hash": "91041cf237e6b9b5",
+      "linhas_na_exportacao": 74
+    },
+    "atlas_docs": {
+      "schema_hash": "2b9be3587bbdec4a",
+      "linhas_na_exportacao": 18
+    },
+    "atlas_destination_profiles": {
+      "schema_hash": "ad123ee269792df0",
+      "linhas_na_exportacao": 55
+    },
+    "normas_fato": {
+      "schema_hash": "b838e40ca9cabb22",
+      "linhas_na_exportacao": 265
+    },
+    "tags": {
+      "schema_hash": "3308fb7bdf84456c",
+      "linhas_na_exportacao": 569
+    },
+    "tag_meta": {
+      "schema_hash": "83432de92d2bc81c",
+      "linhas_na_exportacao": 38
+    },
+    "format_meta": {
+      "schema_hash": "dd03328738de6fb3",
+      "linhas_na_exportacao": 3
+    },
+    "source_tags": {
+      "schema_hash": "02143c2ac85a8640",
+      "linhas_na_exportacao": 495
+    },
+    "sectors": {
+      "schema_hash": "55c466767e235cbb",
+      "linhas_na_exportacao": 22
+    },
+    "source_cnct_profiles": {
+      "schema_hash": "9a26fe1e843269a3",
+      "linhas_na_exportacao": 9407
+    },
+    "sector_programs": {
+      "schema_hash": "1fa68a16e38b1edb",
+      "linhas_na_exportacao": 173
+    },
+    "course_cbos": {
+      "schema_hash": "62e6d69af03259c1",
+      "linhas_na_exportacao": 264
+    },
+    "course_certificacoes": {
+      "schema_hash": "0af7d697c1caec23",
+      "linhas_na_exportacao": 454
+    },
+    "course_normas": {
+      "schema_hash": "87dcbd0efd954fcd",
+      "linhas_na_exportacao": 183
+    },
+    "guia_source_profiles": {
+      "schema_hash": "67c7edee458cd9d8",
+      "linhas_na_exportacao": 1653
+    },
+    "source_atlas_trails": {
+      "schema_hash": "02cdbe567e86c41b",
+      "linhas_na_exportacao": 232
+    },
+    "material_types": {
+      "schema_hash": "4f7c50bf2ff65076",
+      "linhas_na_exportacao": 16
+    },
+    "source_material_types": {
+      "schema_hash": "59a6871db8ada320",
+      "linhas_na_exportacao": 123
+    },
+    "gaps": {
+      "schema_hash": "5f9b52829bf748fa",
+      "linhas_na_exportacao": 129
+    },
+    "gap_atlas_trails": {
+      "schema_hash": "62ad0e8705ffbb1c",
+      "linhas_na_exportacao": 106
+    },
+    "sector_fato_profiles": {
+      "schema_hash": "f77b17b5ddb24ecb",
+      "linhas_na_exportacao": 66
+    },
+    "sector_fato_blocos": {
+      "schema_hash": "99ff21af67c55b80",
+      "linhas_na_exportacao": 53
+    },
+    "sector_fato_atlas": {
+      "schema_hash": "9552a3cc4a3e4188",
+      "linhas_na_exportacao": 16
+    },
+    "sector_coverage_matrix": {
+      "schema_hash": "1ceb77e084f061a1",
+      "linhas_na_exportacao": 111
+    },
+    "dm_monopolio_oferta_arquivado": {
+      "schema_hash": "c32869e60d7afe62",
+      "linhas_na_exportacao": 215
+    },
+    "dm_densidade_setorial": {
+      "schema_hash": "5759ef60752d4afb",
+      "linhas_na_exportacao": 12
+    },
+    "dm_mercado_trabalho": {
+      "schema_hash": "2fd4e5e42b69a27c",
+      "linhas_na_exportacao": 1152
+    },
+    "cbo_canonical": {
+      "schema_hash": "f85607f462e337f2",
+      "linhas_na_exportacao": 98
+    },
+    "dm_oportunidade_estrategica": {
+      "schema_hash": "c560ac8b12b74153",
+      "linhas_na_exportacao": 1152
+    },
+    "dm_compras_governo": {
+      "schema_hash": "dff19e32a3e4bf58",
+      "linhas_na_exportacao": 15
+    },
+    "dm_concursos_tecnicos": {
+      "schema_hash": "e76aff68b68423ec",
+      "linhas_na_exportacao": 15
+    },
+    "dm_noticias_industria": {
+      "schema_hash": "c4f10d09ee196d53",
+      "linhas_na_exportacao": 12
+    },
+    "dm_colapso_silencioso": {
+      "schema_hash": "7cd77a2aa18a1f9a",
+      "linhas_na_exportacao": 25
+    },
+    "dm_importacoes_maquinas": {
+      "schema_hash": "6a28c15cc9cbaffd",
+      "linhas_na_exportacao": 36
+    },
+    "vw_indicador_demanda": {
+      "schema_hash": "d7fb4d151f965646",
+      "linhas_na_exportacao": 10
+    },
+    "vw_mapa_calor_preditivo": {
+      "schema_hash": "743fbc78a1a33225",
+      "linhas_na_exportacao": 6
+    },
+    "vw_mapa_competencias_predito": {
+      "schema_hash": "471a683147c82eae",
+      "linhas_na_exportacao": 40
+    },
+    "dm_pnp_indicadores": {
+      "schema_hash": "10c23be46a7d417a",
+      "linhas_na_exportacao": 10
+    }
+  },
+  "tabelas_pendentes_de_portar": {}
+}
