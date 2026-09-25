@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndústriaEDU — Portal FATO</title>
+    <meta name="description" content="Mapeamento de cursos e fontes de formação técnica na indústria brasileira." />
+
+    <!-- React 18 (auto-hospedado — ver nota de tipografia abaixo pro motivo da troca de CDN, 19/07/2026) -->
+    <script crossorigin="anonymous" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" src="./vendor/react.production.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" src="./vendor/react-dom.production.min.js"></script>
+
+    <!--
+      Tipografia (14/07/2026): IBM Plex Sans (texto/títulos) + IBM Plex Mono (códigos: CBO,
+      TRL-xx, NR-xx). Escolha deliberada, não o padrão "Inter" que o App.jsx pedia sem nunca
+      carregar de fato (achado nesta sessão) — IBM Plex foi desenhada pra contexto técnico/
+      industrial multilíngue, com bom suporte a acentuação em PT, e o Mono reforça o
+      significado que os códigos já têm no sistema de cor semântico (identificador oficial),
+      em vez de só decorar. Ver ESTUDO_ARQUITETURA_E_PLANO.md §4 e theme/tokens.js.
+
+      ATUALIZAÇÃO (19/07/2026): auto-hospedada, não mais via Google Fonts CDN. Motivo: a
+      dependência de `fonts.googleapis.com`/`unpkg.com` (React/Babel também vieram do unpkg,
+      trocados junto) impedia testar/renderizar o portal em qualquer ambiente com rede restrita
+      a poucos domínios — inclusive impedia a própria sessão de IA que mantém este projeto de
+      tirar print de tela pra validação visual. Arquivos idênticos (baixados via npm,
+      @fontsource/ibm-plex-sans@5.3.0 e @fontsource/ibm-plex-mono@5.3.0, mesma fonte/pesos que o
+      Google Fonts servia) — só a origem mudou. Ver portal/vendor/fonts.css.
+    -->
+    <link rel="stylesheet" href="./vendor/fonts.css">
+
+    <!-- Babel (transpilação JSX no browser — MVP, sem Vite/webpack). Auto-hospedado, ver nota acima. -->
+    <!-- Versão travada em 8.0.3 (era sem versão = "latest" móvel, quebraria o SRI abaixo a cada
+         atualização upstream). Se atualizar a versão, recalcular o hash:
+         openssl dgst -sha384 -binary babel.min.js | openssl base64 -A -->
+    <script crossorigin="anonymous" integrity="sha384-fsMuX1qrlL2OwY1g8apML4JcSv2aYFaMXKQIjzX+OOveqSCCdmIMjwNQRoralXGe" src="./vendor/babel.min.js"></script>
+
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: #0f172a;
+        color: #f1f5f9;
+        font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+      }
+      #root { min-height: 100vh; }
+
+      /* Tela de loading enquanto o banco e o WASM carregam */
+      #splash {
+        position: fixed; inset: 0;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 16px;
+        background: #0f172a;
+        z-index: 9999;
+        transition: opacity .4s;
+      }
+      #splash.hidden { opacity: 0; pointer-events: none; }
+      #splash-title {
+        font-size: 20px; font-weight: 700; color: #f1f5f9; letter-spacing: .5px;
+      }
+      #splash-sub {
+        font-size: 13px; color: #64748b;
+      }
+      .spinner {
+        width: 36px; height: 36px;
+        border: 3px solid #1e293b;
+        border-top-color: #6366f1;
+        border-radius: 50%;
+        animation: spin .8s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <!-- Splash exibido antes do React montar -->
+    <div id="splash">
+      <div class="spinner"></div>
+      <div id="splash-title">IndústriaEDU</div>
+      <div id="splash-sub">Carregando banco de dados…</div>
+    </div>
+
+    <div id="root"></div>
+
+    <!--
+      ATUALIZAÇÃO (24/09/2026, SP-75): removido o bootstrap que carregava `db.js` como módulo
+      ES antes de montar o React ("Passo 1" antigo). Isso é resíduo de antes da migração pra
+      API (SP-73/HANDOFF.md) — `App.jsx` e toda a árvore de módulos que ele importa não usam
+      mais `db.js`/sql.js (ver `data/loadCore.js`, que já busca tudo via `apiClient.js`).
+      `db.js` continua existindo no repo como legado morto (decisão registrada no próprio
+      HANDOFF.md), só não é mais carregado por este arquivo. Ver `_BACKLOG.md` SP-75.
+
+      App.jsx tem JSX — Babel standalone transpila em tempo real. Ver nota de compatibilidade
+      ao final deste arquivo.
+    -->
+
+    <script>
+      // Shim CommonJS: o plugin transform-modules-commonjs do Babel gera código que espera
+      // `require`, `exports` e `module` como globais do ambiente (Node), que não existem no
+      // browser por padrão. Sem isso, App.jsx quebra com "exports is not defined" antes mesmo
+      // de qualquer componente rodar (achado ao testar de ponta a ponta pela 1ª vez, 04/07/2026
+      // — ver AUTOAUDITORIA_SITE.md / D88).
+      window.exports = {};
+      window.module = { exports: window.exports };
+      window.require = function(mod) {
+        if (mod === "react") return window.React;
+        if (mod === "react-dom") return window.ReactDOM;
+        throw new Error("Módulo não encontrado: " + mod);
+      };
+      window.__babelRequire = window.require;
+    </script>
+
+    <!--
+      Carregador de múltiplos módulos (D98/D99, 05/07/2026 — quebra do monólito App.jsx).
+      Testado isoladamente antes de entrar em produção (ver ROTEIRO_QUEBRA_MONOLITO.md §0).
+      Descobre `import ... from "./X"` por regex (suficiente para import/export ES padrão
+      usado neste projeto — não é um parser AST completo), busca e transpila cada dependência
+      recursivamente antes do arquivo que a usa, e executa em ordem topológica com
+      require()/module.exports isolado por arquivo. Substitui o fetch de arquivo único usado
+      até 05/07/2026, que não suportava App.jsx importar de vários arquivos.
+    -->
+    <script>
+      const __moduleSourceCache = {};   // path -> { code, imports } (transpilado, não executado)
+      const __moduleExportsCache = {};  // path -> exports (já executado)
+      const __moduleLoadPromises = {};  // path -> Promise em andamento (evita buscar o mesmo arquivo 2x)
+      const IMPORT_RE = /import\s+(?:(\w+)\s*,?\s*)?(?:\{([^}]*)\})?\s*from\s*["']([^"']+)["']/g;
+
+      function __resolveModulePath(fromPath, importPath) {
+        if (!importPath.startsWith(".")) return importPath; // bare specifier -- global (react etc.)
+        const base = fromPath.split("/").slice(0, -1);
+        for (const p of importPath.split("/")) {
+          if (p === ".") continue;
+          else if (p === "..") base.pop();
+          else base.push(p);
+        }
+        return base.join("/");
+      }
+
+      // Achado de performance (05/07/2026, D106 — validação final da quebra do monólito):
+      // a versão anterior buscava cada dependência sequencialmente (for + await em loop), o que
+      // com ~23 arquivos levava 9-16s pra carregar — bem mais lento que o único fetch de antes
+      // da quebra do monólito. Corrigido: dependências-irmãs (mesmo nível do grafo) são buscadas
+      // em paralelo via Promise.all, e um cache de promises evita buscar o mesmo arquivo 2x se
+      // duas ramificações do grafo importarem o mesmo módulo ao mesmo tempo.
+      function __loadModule(path) {
+        if (__moduleLoadPromises[path]) return __moduleLoadPromises[path];
+        const promise = (async () => {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error(`Falha ao buscar módulo ${path}: HTTP ${res.status}`);
+          const raw = await res.text();
+          const imports = [];
+          IMPORT_RE.lastIndex = 0;
+          let m;
+          while ((m = IMPORT_RE.exec(raw))) {
+            if (!m[3].startsWith(".")) continue; // "react"/"react-dom" -- resolvido globalmente, não é arquivo
+            imports.push(__resolveModulePath(path, m[3]));
+          }
+          await Promise.all(imports.map(dep => __loadModule(dep)));
+          const { code } = Babel.transform(raw, {
+            presets: [["react", { runtime: "classic" }]],
+            plugins: ["transform-modules-commonjs"],
+            filename: path,
+          });
+          __moduleSourceCache[path] = { code, imports };
+          return __moduleSourceCache[path];
+        })();
+        __moduleLoadPromises[path] = promise;
+        return promise;
+      }
+
+      function __executeModule(path) {
+        if (__moduleExportsCache[path]) return __moduleExportsCache[path];
+        const { code, imports } = __moduleSourceCache[path];
+        for (const dep of imports) __executeModule(dep);
+        const localModule = { exports: {} };
+        const localRequire = (mod) => {
+          if (mod === "react") return window.React;
+          if (mod === "react-dom") return window.ReactDOM;
+          const resolved = __resolveModulePath(path, mod);
+          if (__moduleExportsCache[resolved]) return __moduleExportsCache[resolved];
+          throw new Error(`Módulo ainda não carregado: ${resolved} (importado de ${path})`);
+        };
+        const fn = new Function("module", "exports", "require", code);
+        fn(localModule, localModule.exports, localRequire);
+        __moduleExportsCache[path] = localModule.exports;
+        return localModule.exports;
+      }
+
+      __loadModule("./App.jsx")
+        .then(() => {
+          const appExports = __executeModule("./App.jsx");
+          window.App = appExports.default;
+          mountApp();
+        })
+        .catch(err => {
+          const sub = document.getElementById("splash-sub");
+          if (sub) sub.textContent = "Erro ao carregar App.jsx: " + err.message;
+          console.error(err);
+        });
+    </script>
+
+    <!-- Monta o React assim que o loader de módulos acima terminar de transpilar/executar App.jsx -->
+    <script>
+      function mountApp() {
+        if (window.__fato_mounted) return;
+        const AppComponent = window.App || (window.__babelExports && window.__babelExports.default);
+        if (!AppComponent) {
+          // Babel ainda não terminou — retry
+          setTimeout(mountApp, 50);
+          return;
+        }
+        window.__fato_mounted = true;
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(React.createElement(AppComponent));
+        // Esconde splash
+        const splash = document.getElementById("splash");
+        if (splash) {
+          splash.classList.add("hidden");
+          setTimeout(() => splash.remove(), 500);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", mountApp);
+    </script>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════════
+    NOTA DE COMPATIBILIDADE (Sprint 13 — criação deste arquivo; atualizada 05/07/2026
+    na quebra do monólito, D98/D99 — ver ROTEIRO_QUEBRA_MONOLITO.md)
+    ═══════════════════════════════════════════════════════════════════
+    App.jsx e os módulos que ele importa (theme/, utils/, data/, components/, views/) usam
+    ES module imports ("import React from 'react'", "import { C } from './theme/tokens.js'").
+    O Babel standalone transpila JSX mas não resolve imports ES module do filesystem sozinho —
+    por isso o carregador de módulos acima (Passo 2) descobre e resolve essas dependências.
+
+    A solução adotada aqui (shim global + transform-modules-commonjs + carregador de múltiplos
+    arquivos) funciona para o MVP local (file:// ou servidor estático simples como
+    `python3 -m http.server`) sem precisar de bundler.
+
+    Se o projeto crescer além do que esse carregador simples aguenta (import dinâmico,
+    re-export, muitos arquivos deixando o boot lento), migrar para Vite/esbuild — este
+    index.html deve ser substituído pelo index.html padrão do bundler, e o shim não será
+    mais necessário.
+
+    Para rodar localmente:
+      cd portal/
+      python3 -m http.server 8080
+      # abrir http://localhost:8080
+    ═══════════════════════════════════════════════════════════════════
+    -->
+  </body>
+</html>
