@@ -82,37 +82,17 @@
     <div id="root"></div>
 
     <!--
-      db.js e App.jsx usam `import` ES-module.
-      O Babel standalone não suporta import/export nativamente em <script type="text/babel">,
-      por isso carregamos os dois como módulos ES nativos do browser com um shim mínimo:
-      db.js exporta initDB/query/scalar → App.jsx importa de "./db.js".
-      O browser moderno resolve isso com type="module".
-      Para o JSX do App.jsx precisamos pré-processar via Babel — usamos o plugin transform-modules-umd
-      embutido no Babel standalone, declarando cada arquivo com data-type="module".
+      ATUALIZAÇÃO (24/09/2026, SP-75): removido o bootstrap que carregava `db.js` como módulo
+      ES antes de montar o React ("Passo 1" antigo). Isso é resíduo de antes da migração pra
+      API (SP-73/HANDOFF.md) — `App.jsx` e toda a árvore de módulos que ele importa não usam
+      mais `db.js`/sql.js (ver `data/loadCore.js`, que já busca tudo via `apiClient.js`).
+      `db.js` continua existindo no repo como legado morto (decisão registrada no próprio
+      HANDOFF.md), só não é mais carregado por este arquivo. Ver `_BACKLOG.md` SP-75.
+
+      App.jsx tem JSX — Babel standalone transpila em tempo real. Ver nota de compatibilidade
+      ao final deste arquivo.
     -->
 
-    <!--
-      Estratégia de carregamento:
-      1. db.js é puro JS (sem JSX), carrega como módulo ES nativo.
-      2. App.jsx tem JSX — Babel standalone transpila em tempo real.
-         Para que o `import { initDB, query } from "./db.js"` dentro do App.jsx funcione,
-         expusemos initDB/query/scalar como globals via o módulo db.js abaixo,
-         e o Babel resolve o import como UMD fallback (window.initDB etc.).
-         Ver nota de compatibilidade ao final deste arquivo.
-    -->
-
-    <!-- Passo 1: Carrega db.js como módulo ES e expõe funções globalmente -->
-    <script type="module">
-      import { initDB, query, scalar } from "./db.js";
-      window.__fato_initDB  = initDB;
-      window.__fato_query   = query;
-      window.__fato_scalar  = scalar;
-      window.__fato_db_ready = true;
-      // Sinaliza ao loader do App.jsx que o módulo está pronto
-      document.dispatchEvent(new Event("fato:db-module-ready"));
-    </script>
-
-    <!-- Passo 2: App.jsx transpilado pelo Babel — aguarda o módulo db.js estar pronto -->
     <script>
       // Shim CommonJS: o plugin transform-modules-commonjs do Babel gera código que espera
       // `require`, `exports` e `module` como globais do ambiente (Node), que não existem no
@@ -122,13 +102,6 @@
       window.exports = {};
       window.module = { exports: window.exports };
       window.require = function(mod) {
-        if (mod === "./db.js") {
-          return {
-            get initDB() { return window.__fato_initDB; },
-            get query()  { return window.__fato_query; },
-            get scalar() { return window.__fato_scalar; },
-          };
-        }
         if (mod === "react") return window.React;
         if (mod === "react-dom") return window.ReactDOM;
         throw new Error("Módulo não encontrado: " + mod);
@@ -143,7 +116,7 @@
       usado neste projeto — não é um parser AST completo), busca e transpila cada dependência
       recursivamente antes do arquivo que a usa, e executa em ordem topológica com
       require()/module.exports isolado por arquivo. Substitui o fetch de arquivo único usado
-      até 05/07/2026, que não suportava App.jsx importar de outros arquivos além de ./db.js.
+      até 05/07/2026, que não suportava App.jsx importar de vários arquivos.
     -->
     <script>
       const __moduleSourceCache = {};   // path -> { code, imports } (transpilado, não executado)
@@ -179,7 +152,6 @@
           let m;
           while ((m = IMPORT_RE.exec(raw))) {
             if (!m[3].startsWith(".")) continue; // "react"/"react-dom" -- resolvido globalmente, não é arquivo
-            if (m[3] === "./db.js") continue;     // já carregado como módulo ES nativo (Passo 1 acima)
             imports.push(__resolveModulePath(path, m[3]));
           }
           await Promise.all(imports.map(dep => __loadModule(dep)));
@@ -201,7 +173,6 @@
         for (const dep of imports) __executeModule(dep);
         const localModule = { exports: {} };
         const localRequire = (mod) => {
-          if (mod === "./db.js") return window.require("./db.js"); // shim global (Passo 2)
           if (mod === "react") return window.React;
           if (mod === "react-dom") return window.ReactDOM;
           const resolved = __resolveModulePath(path, mod);
@@ -227,16 +198,10 @@
         });
     </script>
 
-    <!-- Passo 3: Monta o React quando o Babel terminar de transpilar -->
+    <!-- Monta o React assim que o loader de módulos acima terminar de transpilar/executar App.jsx -->
     <script>
-      // O Babel standalone executa scripts text/babel de forma síncrona após o DOMContentLoaded.
-      // Aguardamos o evento fato:db-module-ready (módulo db.js) E o App exportado.
       function mountApp() {
         if (window.__fato_mounted) return;
-        if (!window.__fato_db_ready) {
-          document.addEventListener("fato:db-module-ready", mountApp, { once: true });
-          return;
-        }
         const AppComponent = window.App || (window.__babelExports && window.__babelExports.default);
         if (!AppComponent) {
           // Babel ainda não terminou — retry
