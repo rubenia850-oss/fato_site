@@ -1,0 +1,11 @@
+name = "fato-portal-api"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+# Estado real em produção (22/09/2026) — publicado via deploy.py (API REST), não via
+# `wrangler deploy`. Este arquivo é só documentação/referência; se quiser voltar a usar
+# wrangler no futuro, os valores abaixo já são os reais.
+[[d1_databases]]
+binding = "DB"
+database_name = "fato-portal-db-v2"
+database_id = "12b7604d-ae2e-4718-99c9-5817a78514bb"
