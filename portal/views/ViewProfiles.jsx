@@ -552,7 +552,7 @@ export function ViewProfiles({pendingProfile, onPendingConsumed}){
   return(
     <div style={{maxWidth:1100,margin:"0 auto",padding:"28px 16px"}}>
       <div style={{marginBottom:20}}>
-        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>SISTEMA FATO · CNCT 3ª EDIÇÃO</div>
+        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>INDÚSTRIAEDU · CNCT 3ª EDIÇÃO</div>
         <div style={{fontSize:20,fontWeight:800,color:C.heading}}>30 Perfis CNCT</div>
         <div style={{fontSize:12,color:C.dim,marginTop:4}}>Técnicos de nível médio reconhecidos pelo MEC para a indústria brasileira</div>
       </div>
