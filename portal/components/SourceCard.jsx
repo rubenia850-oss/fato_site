@@ -30,7 +30,7 @@ export function SourceCard({s,favorites,toggleFav,expanded,onExpand,mini}){
           <div style={{display:"flex",alignItems:"center",gap:6}}>
             <span style={{fontSize:mini?10:12,fontWeight:700,color:C.heading}}>{s.company}</span>
             {newIds?.has(s.id)&&<span style={{fontSize:8,color:C.greenLight}}>🆕</span>}
-            {isAtlas&&<span style={{...pill(C.purpleDim2,C.purpleSoft,C.purpleBorderA),fontSize:8}}>Atlas FATO</span>}
+            {isAtlas&&<span style={{...pill(C.purpleDim2,C.purpleSoft,C.purpleBorderA),fontSize:8}}>Atlas IndústriaEDU</span>}
             {s.material_type&&<span title={s.material_type.confidence==='inferido'?'Classificação inferida':undefined} style={{...pill(C.border,C.muted),fontSize:8}}>{s.material_type.label}</span>}
             {s.cnct_hint&&<button onClick={handleCnctClick} title={`Ver Perfil CNCT: ${s.cnct_hint}`} style={{...pill(C.purpleDim,C.indigoBright,C.indigoBorderA3),fontSize:8,cursor:"pointer",border:"1px solid #4338ca66"}}>CNCT {s.cnct_hint} ↗</button>}
             {isPending&&<span title="URL pendente de verificação" style={{fontSize:11,cursor:"help"}}>⚠️</span>}
@@ -96,7 +96,7 @@ export function SourceCard({s,favorites,toggleFav,expanded,onExpand,mini}){
           {s.bloco&&(
             <div style={{fontSize:10,color:C.faint,marginBottom:8}}>
               Bloco Guia: <span style={{color:C.tech}}>{s.bloco}</span>
-              {s.source_doc&&<span style={{marginLeft:8,color:s.source_doc==="atlas"?C.purpleLight:C.tech,fontSize:9}}>· {s.source_doc==="atlas"?"Atlas FATO":"Guia v6.3"}</span>}
+              {s.source_doc&&<span style={{marginLeft:8,color:s.source_doc==="atlas"?C.purpleLight:C.tech,fontSize:9}}>· {s.source_doc==="atlas"?"Atlas IndústriaEDU":"Guia v6.3"}</span>}
             </div>
           )}
           {s.url&&(
