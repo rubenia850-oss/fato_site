@@ -95,7 +95,7 @@ export function ViewGuideBlocks(){
   return(
     <div style={{maxWidth:1100,margin:"0 auto",padding:"28px 16px"}}>
       <div style={{marginBottom:20}}>
-        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>SISTEMA FATO · GUIA INDUSTRIAL v6.3</div>
+        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>INDÚSTRIAEDU · GUIA INDUSTRIAL v6.3</div>
         <div style={{fontSize:20,fontWeight:800,color:C.heading}}>29 Blocos do Guia Industrial</div>
         <div style={{fontSize:12,color:C.dim,marginTop:4}}>Setores industriais mapeados com fontes de aprendizagem técnica e {guiaLoading?"...":guia.length} fichas do Guia</div>
       </div>
