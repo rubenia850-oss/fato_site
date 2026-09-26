@@ -101,7 +101,7 @@ export function ViewEmpresas({pendingCompany, onPendingConsumed}){
       <div style={{marginBottom:18}}>
         <div style={{fontSize:20,fontWeight:800,color:C.heading}}>🏢 Empresas</div>
         <div style={{fontSize:12,color:C.dim,marginTop:4}}>
-          {companies.length} empresas mapeadas no FATO · {filtered.length} exibidas
+          {companies.length} empresas mapeadas · {filtered.length} exibidas
         </div>
       </div>
 
