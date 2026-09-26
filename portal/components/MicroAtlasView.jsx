@@ -53,7 +53,7 @@ export default function MicroAtlasView({ profile }) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10, marginBottom: 6 }}>
         <div>
           <div style={{ fontSize: 10, color: C.muted, marginBottom: 6 }}>
-            Sistema FATO · Micro-Atlas do Curso #{profile.id}
+            IndústriaEDU · Micro-Atlas do Curso #{profile.id}
           </div>
           <div style={{ fontSize: 16, fontWeight: 800, color: C.heading }}>{profile.name}</div>
         </div>
