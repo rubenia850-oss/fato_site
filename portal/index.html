@@ -69,6 +69,14 @@
         animation: spin .8s linear infinite;
       }
       @keyframes spin { to { transform: rotate(360deg); } }
+
+      /* Nav responsivo (UX 25/09/2026) — linha de itens no desktop, hambúrguer no mobile */
+      .nav-items { display: flex; align-items: center; gap: 2px; }
+      .nav-hamburger { display: none; }
+      @media (max-width: 860px) {
+        .nav-items { display: none; }
+        .nav-hamburger { display: inline-flex; }
+      }
     </style>
   </head>
   <body>

@@ -1,24 +1,37 @@
 // views/ViewTrails.jsx — catálogo de trilhas de carreira (CNCT), com busca e filtro de curadoria.
 // Extraído de App.jsx na Etapa 5 da quebra do monólito (D98/D103, 05/07/2026).
+// UX 25/09/2026 (Relatório Técnico Final IndústriaEDU, seção 5): chips de categoria — a
+// categoria é heurística (data/trailCategories.js), não um campo do banco. Ver nota lá.
 import { useState, useMemo } from "react";
 import { C, SEL } from "../theme/tokens.js";
 import { useData } from "../context/DataContext.js";
 import { TrailCard } from "../components/TrailCard.jsx";
+import { categorizeTrail, CATEGORY_LABELS, CATEGORY_ORDER } from "../data/trailCategories.js";
 
 export function ViewTrails({favorites,toggleFav}){
   const {trails} = useData();
   const [q,setQ]=useState("");
   const [onlyCurated,setOnlyCurated]=useState(false);
+  const [cat,setCat]=useState("all");
 
   // EXP-09 (Sprint 16): trails 6→105 (D71-DB, sessão BANCO) — as 6 originais (trl-01..06) têm
   // ícone próprio e curadoria manual; as 99 novas (TRL-*) são geradas a partir do catálogo CNCT,
   // com conteúdo igualmente rico mas sem emoji definido (fallback abaixo).
   const isCurated = (id) => /^trl-\d+$/.test(id);
 
-  const filtered = useMemo(() => trails.filter(t =>
+  const categorized = useMemo(() => trails.map(t => ({ ...t, _cat: categorizeTrail(t) })), [trails]);
+
+  const catCounts = useMemo(() => {
+    const counts = {};
+    categorized.forEach(t => { counts[t._cat] = (counts[t._cat]||0)+1; });
+    return counts;
+  }, [categorized]);
+
+  const filtered = useMemo(() => categorized.filter(t =>
     (!q || t.name.toLowerCase().includes(q.toLowerCase()) || (t.cnct||"").toLowerCase().includes(q.toLowerCase())) &&
-    (!onlyCurated || isCurated(t.id))
-  ), [trails, q, onlyCurated]);
+    (!onlyCurated || isCurated(t.id)) &&
+    (cat==="all" || t._cat===cat)
+  ), [categorized, q, onlyCurated, cat]);
 
   return (
     <div style={{maxWidth:900,margin:"0 auto",padding:"28px 20px"}}>
@@ -29,6 +42,18 @@ export function ViewTrails({favorites,toggleFav}){
           Cada trilha conecta um <strong style={{color:C.social}}>programa social de acesso</strong> com a <strong style={{color:C.tech}}>qualificação técnica</strong> e o perfil <strong style={{color:C.greenLight}}>CNCT</strong> alvo. {trails.length} trilhas mapeadas — 6 com curadoria manual completa, {trails.length-6} geradas a partir do catálogo nacional de cursos técnicos.
         </p>
       </div>
+
+      {/* Chips de categoria — classificação por palavra-chave, não é campo do banco (ver topo do arquivo) */}
+      <div style={{display:"flex",gap:6,marginBottom:14,flexWrap:"wrap"}}>
+        <button onClick={()=>setCat("all")}
+          style={{...chipStyle(cat==="all")}}>Todas <span style={{opacity:.6}}>({trails.length})</span></button>
+        {CATEGORY_ORDER.filter(k=>catCounts[k]).map(k=>(
+          <button key={k} onClick={()=>setCat(k)} style={{...chipStyle(cat===k)}}>
+            {CATEGORY_LABELS[k]} <span style={{opacity:.6}}>({catCounts[k]})</span>
+          </button>
+        ))}
+      </div>
+
       <div style={{display:"flex",gap:8,marginBottom:18,flexWrap:"wrap",alignItems:"center"}}>
         <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Buscar trilha ou perfil CNCT..." style={{...SEL,width:260}}/>
         <label style={{display:"flex",alignItems:"center",gap:4,fontSize:11,color:C.purpleLight,cursor:"pointer"}}>
@@ -47,4 +72,12 @@ export function ViewTrails({favorites,toggleFav}){
       )}
     </div>
   );
+}
+
+function chipStyle(active){
+  return {
+    padding:"6px 12px",borderRadius:99,fontSize:11,cursor:"pointer",fontFamily:"inherit",fontWeight:600,
+    background:active?C.purple+"33":C.surface,color:active?C.purpleLight:C.muted,
+    border:`1px solid ${active?C.purpleBorderA:C.border}`,whiteSpace:"nowrap",
+  };
 }

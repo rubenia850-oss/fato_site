@@ -6,6 +6,7 @@ import { C, pill, card, btn } from "../theme/tokens.js";
 import { useData } from "../context/DataContext.js";
 import { SourceCard } from "./SourceCard.jsx";
 import { NormaBadge } from "./badges.jsx";
+import { isStepDone, toggleStep, trailProgress } from "../utils/progress.js";
 
 // SP-49 (15/07, achado no SP-45 item 2 do ESTUDO_VIABILIDADE): escola_sources.tipo — cobertura
 // 120/253 (47%), melhor que material_types (item 10 do Tier 2, 6,5%). Valores reais no dado:
@@ -21,6 +22,11 @@ export function TrailCard({trail,favorites,toggleFav}){
   const {sourceMap} = useData();
   const [open,setOpen]=useState(false);
   const [stepSel,setStepSel]=useState(null);
+  const [progress,setProgress]=useState(()=>trailProgress(trail.id,trail.steps.length));
+  const handleToggleStep=(i)=>{
+    toggleStep(trail.id,i);
+    setProgress(trailProgress(trail.id,trail.steps.length));
+  };
   const total=trail.steps.reduce((a,s)=>a+s.ids.length,0);
   const hasPT=trail.steps.some(s=>s.ids.some(id=>sourceMap[id]?.lang?.includes("PT")));
   const hasFree=trail.steps.some(s=>s.ids.some(id=>!sourceMap[id]?.cadastro));
@@ -87,6 +93,18 @@ export function TrailCard({trail,favorites,toggleFav}){
           {hasFree&&<span style={{...pill(C.greenDim4,C.lime,C.limeBorderA)}}>✓ Sem cadastro</span>}
           {hasPT&&<span style={{...pill(C.greenDim2,C.greenBright,C.greenBorderA2)}}>✓ Em PT</span>}
         </div>
+        {/* Progresso local (Fase 1, sem login) — persistido em localStorage, ver utils/progress.js */}
+        {progress.total>0&&(
+          <div style={{marginBottom:10}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:C.muted,marginBottom:3}}>
+              <span>{progress.pct===100?"✓ Concluída":progress.done>0?"Em andamento":"Não iniciada"}</span>
+              <span>{progress.done}/{progress.total} etapas</span>
+            </div>
+            <div style={{height:5,borderRadius:3,background:C.border,overflow:"hidden"}}>
+              <div style={{height:"100%",width:`${progress.pct}%`,background:progress.pct===100?C.greenBright:trail.color,transition:"width .2s"}}/>
+            </div>
+          </div>
+        )}
         <button onClick={()=>setOpen(o=>!o)}
           style={{...btn(open?trail.color+"33":C.surface,trail.color,trail.color+"44"),width:"100%"}}>
           {open?"▲ Fechar trilha":"▼ Ver etapas da trilha"}
@@ -100,6 +118,9 @@ export function TrailCard({trail,favorites,toggleFav}){
               <div key={i} style={{marginBottom:i<trail.steps.length-1?12:0}}>
                 <div onClick={()=>setStepSel(isSel?null:i)}
                   style={{display:"flex",alignItems:"center",gap:10,cursor:"pointer",padding:"8px 10px",borderRadius:7,background:isSel?trail.color+"15":"transparent",border:`1px solid ${isSel?trail.color+"44":"transparent"}`,transition:"all .15s"}}>
+                  <input type="checkbox" checked={isStepDone(trail.id,i)} title="Marcar etapa como concluída"
+                    onClick={e=>e.stopPropagation()} onChange={()=>handleToggleStep(i)}
+                    style={{width:15,height:15,accentColor:C.greenBright,cursor:"pointer",flexShrink:0}}/>
                   <div style={{width:22,height:22,borderRadius:"50%",background:trail.color+"22",border:`1px solid ${trail.color}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:trail.color,flexShrink:0}}>{i+1}</div>
                   <div style={{flex:1}}>
                     <div style={{fontSize:12,fontWeight:700,color:C.text}}>{step.phase}</div>
