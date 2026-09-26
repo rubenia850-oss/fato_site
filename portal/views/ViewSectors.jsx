@@ -141,7 +141,7 @@ export function ViewSectors(){
         {(fato.profiles.length>0||fato.blocos.length>0||fato.atlas.length>0)&&(
           <div style={{...card(C.blueBorderA2),padding:16,marginBottom:20,borderColor:C.blueDark}}>
             <div style={{fontSize:10,color:C.blue,fontWeight:700,marginBottom:12,textTransform:"uppercase",letterSpacing:1}}>
-              📚 Contexto FATO — Base de Conhecimento deste Setor
+              📚 Base de Conhecimento deste Setor
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:12}}>
               {fato.profiles.length>0&&(
@@ -171,7 +171,7 @@ export function ViewSectors(){
               )}
               {fato.blocos.length>0&&(
                 <div>
-                  <div style={{fontSize:9,color:C.faint,marginBottom:6,fontWeight:700}}>BLOCOS DO GUIA FATO</div>
+                  <div style={{fontSize:9,color:C.faint,marginBottom:6,fontWeight:700}}>BLOCOS DO GUIA</div>
                   <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
                     {fato.blocos.map((b,i)=>(
                       <span key={i} style={{...pill(C.blueDim2,C.skyBlue,C.blueBorderA),fontSize:9}}>
@@ -184,7 +184,7 @@ export function ViewSectors(){
               )}
               {fato.atlas.length>0&&(
                 <div>
-                  <div style={{fontSize:9,color:C.faint,marginBottom:6,fontWeight:700}}>ATLAS FATO COBRINDO ESTE SETOR</div>
+                  <div style={{fontSize:9,color:C.faint,marginBottom:6,fontWeight:700}}>ATLAS COBRINDO ESTE SETOR</div>
                   <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
                     {fato.atlas.map((a,i)=>(
                       <span key={i} style={{...pill(C.purpleDim3,C.purpleSoft,C.purpleBorderA),fontSize:9}}>
@@ -268,7 +268,7 @@ export function ViewSectors(){
   return(
     <div style={{maxWidth:1100,margin:"0 auto",padding:"28px 16px"}}>
       <div style={{marginBottom:20}}>
-        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>SISTEMA FATO · SETORES INDUSTRIAIS</div>
+        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>INDÚSTRIAEDU · SETORES INDUSTRIAIS</div>
         <div style={{fontSize:20,fontWeight:800,color:C.heading}}>12 Setores Industriais</div>
         <div style={{fontSize:12,color:C.dim,marginTop:4}}>Empresas e programas de qualificação por setor produtivo brasileiro</div>
       </div>
@@ -291,7 +291,7 @@ export function ViewSectors(){
                 <span style={{fontSize:10,color:C.faint}}>{companies} empresas</span>
                 <span style={{fontSize:10,color:C.faint}}>· {progs} programas</span>
                 {freeCount>0&&<span style={{...pill(C.greenDim,C.emerald),fontSize:9}}>{freeCount} grátis</span>}
-                {profileCount>0&&<span style={{...pill(C.blueDark,C.blue),fontSize:9}}>{profileCount} perfis FATO</span>}
+                {profileCount>0&&<span style={{...pill(C.blueDark,C.blue),fontSize:9}}>{profileCount} perfis</span>}
               </div>
             </div>
           );
