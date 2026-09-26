@@ -76,7 +76,7 @@ export function ViewGaps(){
   return(
     <div style={{maxWidth:1100,margin:"0 auto",padding:"28px 16px"}}>
       <div style={{marginBottom:20}}>
-        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>SISTEMA FATO · ANÁLISE DE COBERTURA</div>
+        <div style={{fontSize:11,color:C.muted,marginBottom:4}}>INDÚSTRIAEDU · ANÁLISE DE COBERTURA</div>
         <div style={{fontSize:20,fontWeight:800,color:C.heading}}>Cobertura Guia × Atlas</div>
         <div style={{fontSize:12,color:C.dim,marginTop:4}}>Comparação entre os dois catálogos: o que o Guia cobre e o Atlas ainda não cita · o que o Atlas cobre e o Guia ainda não lista · onde os dois se sobrepõem</div>
       </div>
