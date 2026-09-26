@@ -7,9 +7,9 @@ export function ViewAbout(){
   const {all,trails} = useData();
   const items=[
     {title:"O que é",color:C.social,content:"Mapeamento aberto de fontes educacionais gratuitas para a indústria brasileira. Cobre programas sociais corporativos e recursos de qualificação técnica — sem anunciante, sem paywall."},
-    {title:`${all.length} fontes em duas camadas`,color:C.tech,content:`Social: ${all.filter(s=>s.layer==="social").length} programas de empresas para comunidades e trabalhadores. Técnica: ${all.filter(s=>s.layer==="technical").length} fontes de qualificação profissional curadas do Guia v6.3 e Sistema FATO Atlas v1.2.`},
+    {title:`${all.length} fontes em duas camadas`,color:C.tech,content:`Social: ${all.filter(s=>s.layer==="social").length} programas de empresas para comunidades e trabalhadores. Técnica: ${all.filter(s=>s.layer==="technical").length} fontes de qualificação profissional curadas do Guia v6.3 e Atlas IndústriaEDU v1.2.`},
     {title:`${trails.length} trilhas de carreira`,color:C.purpleLight,content:"Cada trilha conecta programas sociais de acesso a fontes técnicas de qualificação, com o perfil CNCT alvo identificado. Etapas clicáveis mostram os cards das fontes diretamente."},
-    {title:"Protocolo de curadoria",color:C.green,content:"Protocolo v1.2: campos obrigatórios de acesso, idioma, formato e cadastro. Entradas do Atlas FATO rastreadas ao documento-origem. Badge ⚠️ indica URL pendente de verificação."},
+    {title:"Protocolo de curadoria",color:C.green,content:"Protocolo v1.2: campos obrigatórios de acesso, idioma, formato e cadastro. Entradas do Atlas IndústriaEDU rastreadas ao documento-origem. Badge ⚠️ indica URL pendente de verificação."},
     {title:"Como sugerir uma fonte",color:C.amber,content:"Requisitos: (1) gratuita sem compra, (2) URL verificada, (3) conteúdo técnico ou social industrial relevante para o Brasil, (4) não duplicata. Use o Protocolo v1.2 para formatar a sugestão."},
   ];
   return (
@@ -25,7 +25,7 @@ export function ViewAbout(){
         </div>
       ))}
       <div style={{marginTop:16,padding:"12px 16px",background:C.surface2,border:"1px solid #1e293b",borderRadius:8,fontSize:11,color:C.faint}}>
-        Mapeamento + Guia v6.3 + Sistema FATO Atlas v1.2 · v3.2 · Junho 2026
+        Mapeamento + Guia v6.3 + Atlas IndústriaEDU v1.2 · v3.2 · Junho 2026
       </div>
     </div>
   );
